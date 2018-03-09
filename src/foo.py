@@ -1,2 +1,3 @@
-print 'foo bar baz'
-return 'my name is foo'
+# adjective='happy', name='foo'
+
+return 'my name is {} {}'.format(adjective, name)

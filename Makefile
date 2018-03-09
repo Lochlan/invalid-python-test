@@ -15,5 +15,5 @@ test: build
 	python -m unittest tests
 
 $(BUILD_PATH)/%.py: $(SOURCE_PATH)/%.py
-	echo "def run():" > $@
+	echo "def run($(shell head -n 1 $? | sed -e 's/^#//')):" > $@
 	sed -e 's/^/    /' $? >> $@
